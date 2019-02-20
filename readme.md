@@ -26,7 +26,7 @@ Sitecore.XA.Foundation.Variants.Abstractions
 
 * [Script Variant field](http://blog.martinmiles.net/post/script-rendering-variant-field-in-sxa-why-would-one-need-it) - executes custom JS script in order to interact with other elements. see use cases
 * [Image Section Variant field](http://blog.martinmiles.net/post/creating-a-custom-rendering-variant-section-to-render-element-with-background-image) - works like a section but features a backgroung image from Sitecore passed through style
-* [Item Reference Variant field](http://blog.martinmiles.net/post/welcome-item-reference-a-rendering-variant-field-missing-out-of-the-box-in-SXA) - use this field to reference another item, especially when referencing data items to rendering variants
+* [Item Reference Variant field](http://blog.martinmiles.net/post/welcome-item-reference-a-rendering-variant-field-missing-out-of-the-box-in-SXA) - use it to reference another item, especially referencing data items from rendering variants
 * [Query Parameter Variant field](http://blog.martinmiles.net/post/sxa-implementing-url-query-parameter-rendering-variant-with-little-efforts) - use it to extract and display a value of param from URL qury string 
 * [NVelocity Extensions](http://blog.martinmiles.net/post/creating-custom-sxa-components-with-rendering-variants-and-almost-no-codebehind-on-an-example-of-social-share-buttons) - this walkthrough has an explanation of how NVelocity templates work
 
@@ -41,4 +41,4 @@ At the moment project has .NET Framework 2.6.2 runtime, so running it with Sitec
 * [Twitter](https://twitter.com/SitecoreMartin) - Twitter
 * [LinkedIn](https://www.linkedin.com/in/martin-miles/) - LinkedIn profile
 * [Sitecore Slack](https://sitecorechat.slack.com/team/U0KDE1VD3/) - reference to a profiles at Sitecore Slack channel
-* [Blog](http://blog.MartinMiles.net/) - "Experience Sitecore!" blog with plenty of interesting things about Sitecore and its implementation
+* [Author's blog](http://blog.MartinMiles.net/) - "Experience Sitecore!" blog with plenty of interesting things about Sitecore and its implementation
