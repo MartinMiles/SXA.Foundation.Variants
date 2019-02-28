@@ -16,13 +16,13 @@ namespace SXA.Foundation.Variants.Pipelines.VariantFields.QueryString
             variantFieldArgs.TranslatedField = new VariantQueryString(args.VariantItem)
             {
                 // this property is reused under different purpose rather than named - it stores URL parameter name
-                FieldName = args.VariantItem[Constants.RenderingVariants.Fields.QueryField.FieldName],
+                FieldName = args.VariantItem[Constants.RenderingVariants.Fields.QueryString.FieldName],
 
-                Tag = args.VariantItem.Fields[Constants.RenderingVariants.Fields.QueryField.Tag].GetEnumValue(),
-                CssClass = args.VariantItem[Constants.RenderingVariants.Fields.QueryField.CssClass],
-                Prefix = args.VariantItem[Constants.RenderingVariants.Fields.QueryField.Prefix],
-                Suffix = args.VariantItem[Constants.RenderingVariants.Fields.QueryField.Suffix],
-                RenderIfEmpty = args.VariantItem[Constants.RenderingVariants.Fields.QueryField.RenderIfEmpty] == "1"
+                Tag = args.VariantItem.Fields[Constants.RenderingVariants.Fields.QueryString.Tag].GetEnumValue(),
+                CssClass = args.VariantItem[Constants.RenderingVariants.Fields.QueryString.CssClass],
+                Prefix = args.VariantItem[Constants.RenderingVariants.Fields.QueryString.Prefix],
+                Suffix = args.VariantItem[Constants.RenderingVariants.Fields.QueryString.Suffix],
+                RenderIfEmpty = args.VariantItem[Constants.RenderingVariants.Fields.QueryString.RenderIfEmpty] == "1"
             };
         }
     }

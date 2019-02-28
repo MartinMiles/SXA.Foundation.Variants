@@ -29,12 +29,13 @@ Sitecore.XA.Foundation.Variants.Abstractions
 * [Item Reference Variant field](http://blog.martinmiles.net/post/welcome-item-reference-a-rendering-variant-field-missing-out-of-the-box-in-SXA) - use this field to reference another item, especially when referencing data items to rendering variants
 * [Query Parameter Variant field](http://blog.martinmiles.net/post/sxa-implementing-url-query-parameter-rendering-variant-with-little-efforts) - use it to extract and display a value of param from URL qury string 
 * [NVelocity Extensions](http://blog.martinmiles.net/post/creating-custom-sxa-components-with-rendering-variants-and-almost-no-codebehind-on-an-example-of-social-share-buttons) - this walkthrough has an explanation of how NVelocity templates work
+* [Image Link with classes](http://blog.martinmiles.net/post/image-tag-wrapped-with-anchor-both-having-own-classes-but-without-any-unwanted-component-wrappings-easy-not-oob-in-sxa-but-here-is-the-fix) - adds IMG tag wrapped with A tag, both having own classed with no extra wrappings 
 
 
 ### Other notes
 
 At this stage neither package with items, nor serialization are not provided, so you might need to create those yourself (as per blog post guidances) and change the ID references in code.
-At the moment project has .NET Framework 2.6.2 runtime, so running it with Sitecore 9.1+ will require changing runtime from you.
+At the moment project has .NET Framework 4.6.2 runtime, so running it with Sitecore 9.1+ requires changing runtime from you.
 
 ## Contact author
 

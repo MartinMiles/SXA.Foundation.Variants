@@ -90,6 +90,10 @@
     <Compile Include="NVelocityExtensions\ItemFieldTool.cs" />
     <Compile Include="NVelocityExtensions\LinkTool.cs" />
     <Compile Include="Pipelines\GetVelocityTemplateRenderers\AddTemplateRenderers.cs" />
+    <Compile Include="Pipelines\VariantFields\ImageLink\Constants.cs" />
+    <Compile Include="Pipelines\VariantFields\ImageLink\ParseImageLink.cs" />
+    <Compile Include="Pipelines\VariantFields\ImageLink\RenderImageLink.cs" />
+    <Compile Include="Pipelines\VariantFields\ImageLink\VariantImageLink.cs" />
     <Compile Include="Pipelines\VariantFields\ImageSection\Constants.cs" />
     <Compile Include="Pipelines\VariantFields\ImageWithClass\Constants.cs" />
     <Compile Include="Pipelines\VariantFields\ImageWithClass\VariantImageWithClass.cs" />

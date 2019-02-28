@@ -13,7 +13,7 @@ namespace SXA.Foundation.Variants
 
             public static partial class Fields
             {
-                public static class QueryField
+                public static class QueryString
                 {
                     public static ID Tag { get; } = new ID("{F556DEDD-5D6B-4FFF-A904-E4C65AB0E698}");
                     public static ID CssClass { get; } = new ID("{B3B6B300-1704-493B-999C-AD21CCE58FEF}");
