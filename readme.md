@@ -55,15 +55,15 @@ When using built-in **Responsive Image** variant field, `<img>` tag always got w
 
 #### 3. Image link
 
-This is quite powerful and at the same time very simple rendering variant field - it nicely renders `<img>` tag surrounded with `<a>` anchor tag withoun any of other unwanted wrappings normally coming when nesting components in SXA.
+This is quite powerful and at the same time very simple rendering variant field - it nicely renders `<img>` tag surrounded with `<a>` anchor tag without any of other unwanted wrappings normally coming when nesting components in SXA.
 
-An image from media library can be statically referenced or taken out of a context item field of **Image** type. Please note, that statical reference always takes over a context field, if both set.
+An image from media library can be statically referenced or taken out of a context item field of **Image** type. Please note, that static reference always takes over a context field, if both set.
 
 Another feature that is not easy achievable out of the box is ability to specify individual CSS classes for both `<a>` and `<img>` tags. If link is not set - it will simply render an image with class, achieving the same as previous **Image with class** variant field does.
 
 ```
 <a href="http://link.to/internal-or-external-item" class="individual-class-for-anchor">
-    <img src="/-/Media-item-from-sitecore" background=""  class="individual-class-for-image"/>
+    <img src="/-/Media-item-from-sitecore" class="individual-class-for-image"/>
 </a>
 ```
 
