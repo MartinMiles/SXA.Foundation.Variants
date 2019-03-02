@@ -116,9 +116,8 @@ Currently there are two more tools coming with this module:
 
 Contains two methods:
 
-`GetItemReferenceItem` - works similar to Item Reference rendering variant field, but withing NVelocity template. It returns another (referenced) item, referenced at some field of context item.
-
-`GetField` - simply returns the field value of context item.
+* `GetItemReferenceItem` - works similar to Item Reference rendering variant field, but withing NVelocity template. It returns another (referenced) item, referenced at some field of context item.
+* `GetField` - simply returns the field value of context item.
 
 Call usages:
 
@@ -134,9 +133,8 @@ $itemFieldTool.GetField($item, "Field name to read from")
 
 Contains two methods:
 
-`GetCurrent` - returns full URL of a current context item (ie. current page URL)
-
-`GetItemLink` - return full URL of a provided item. Boolean parameter difines whether to generate full or relative URL
+* `GetCurrent` - returns full URL of a current context item (ie. current page URL)
+* `GetItemLink` - return full URL of a provided item. Boolean parameter difines whether to generate full or relative URL
 
 Call usages:
 
