@@ -158,7 +158,7 @@ $linkTool.GetItemLink($item,true)
 At this stage neither package with items, nor serialization are not provided, you might need to create those yourself (as per blog post guidances) and change the ID references in code.
 At the moment project has **.NET Framework 4.6.2** runtime, so running it with Sitecore 9.1+ requires changing runtime before rebuild.
 
-There is a package provided at `Sitecore packages` folder that installs all rendering variant field templates on your system under `/sitecore/templates/Foundation/RSSB/Rendering Variants` folder (renane `Tenant` to your actual value). 
+There is a package provided at `Sitecore packages` folder that installs all rendering variant field templates on your system under `/sitecore/templates/Foundation/Tenant/Rendering Variants` folder (renane `Tenant` to your actual value). 
 However, it deploys neither binaries, not configuration - due to that target environments may vary, you might also rename namespaces and adjust changes in the configuration. 
 Once compiled, simply copy dll and config into corresponding folders.
 
