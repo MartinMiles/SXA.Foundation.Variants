@@ -1,6 +1,7 @@
 ﻿using System;
 using Sitecore.Data.Items;
 using Sitecore.Links;
+using Sitecore.Web.UI.WebControls;
 
 namespace SXA.Foundation.Variants.NVelocityExtensions
 {
@@ -21,6 +22,17 @@ namespace SXA.Foundation.Variants.NVelocityExtensions
         {
             var item = Sitecore.Context.Item;
             return item == null ? String.Empty : GetItemLink(item, includeServerUrl);
+        }
+        public static string RenderLink(Item item, string cssClass = "")
+        {
+            var fieldRenderer = new FieldRenderer
+            {
+                Item = item,
+                CssClass = cssClass,
+                FieldName = "Link"
+            };
+
+            return fieldRenderer.Render();
         }
     }
 }

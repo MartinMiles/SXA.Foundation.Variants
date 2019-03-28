@@ -1,7 +1,5 @@
 ﻿using Sitecore.Data;
 using Sitecore.Data.Fields;
-using Sitecore.Data.Items;
-using Sitecore.Web.UI.WebControls;
 using Sitecore.XA.Foundation.Variants.Abstractions.Pipelines.ParseVariantFields;
 
 namespace SXA.Foundation.Variants.Pipelines.VariantFields.ImageLink
@@ -13,37 +11,38 @@ namespace SXA.Foundation.Variants.Pipelines.VariantFields.ImageLink
         public override void TranslateField(ParseVariantFieldArgs args)
         {
             ParseVariantFieldArgs variantFieldArgs = args;
+            var variantItem = args.VariantItem;
 
-            var imageMediaItem = new Field(Constants.RenderingVariants.Fields.ImageLink.ImageMediaItem, args.VariantItem);
-            var linkField = new Field(Constants.RenderingVariants.Fields.ImageLink.Link, args.VariantItem);
-
-            var variantImageLink = new VariantImageLink { ItemName = args.VariantItem.Name };
-
-            var linkClass = args.VariantItem[Constants.RenderingVariants.Fields.ImageLink.LinkClass];
-            var imageClass = args.VariantItem[Constants.RenderingVariants.Fields.ImageLink.ImageClass];
-
-            var mediaField = args.VariantItem[Constants.RenderingVariants.Fields.ImageLink.ImageMediaItem];
-            var contextItemFieldName = args.VariantItem[Constants.RenderingVariants.Fields.ImageLink.ImageField];
-
-            variantImageLink.Link = Render(args.VariantItem, linkField.Name, linkClass);
-
-            variantImageLink.ImageField = string.IsNullOrWhiteSpace(mediaField)
-                ? Render(Sitecore.Context.Item, contextItemFieldName, imageClass)
-                : Render(args.VariantItem, imageMediaItem.Name, imageClass);
-
-            variantFieldArgs.TranslatedField = variantImageLink;
-        }
-
-        private string Render(Item item, string fieldName, string cssClass)
-        {
-            var fieldRenderer = new FieldRenderer
+            var variantImageLink = new VariantImageLink
             {
-                Item = item,
-                CssClass = cssClass,
-                FieldName = fieldName
+                ItemName = variantItem.Name,
+                LinkClass = variantItem[Constants.RenderingVariants.Fields.ImageLink.LinkClass],
+                ImageClass = variantItem[Constants.RenderingVariants.Fields.ImageLink.ImageClass]
             };
 
-            return fieldRenderer.Render();
+            var imageMediaItemField = new Field(Constants.RenderingVariants.Fields.ImageLink.ImageMediaItem, variantItem);
+            var linkDirField = new Field(Constants.RenderingVariants.Fields.ImageLink.Link, variantItem);
+
+            var mediaDirValue = variantItem[Constants.RenderingVariants.Fields.ImageLink.ImageMediaItem];
+
+            var linkRefValue = variantItem[Constants.RenderingVariants.Fields.ImageLink.LinkField];
+            var mediaRefValue = variantItem[Constants.RenderingVariants.Fields.ImageLink.ImageField];
+
+            variantImageLink.VariantItem = variantItem;
+
+            if (!string.IsNullOrWhiteSpace(linkDirField.Value))
+            {
+                variantImageLink.RenderLinkFromVariantItem = true;
+            }
+            if (!string.IsNullOrWhiteSpace(mediaDirValue))
+            {
+                variantImageLink.RenderImageFromVariantItem = true;
+            }
+
+            variantImageLink.LinkFieldName = string.IsNullOrWhiteSpace(linkDirField.Value) ? linkRefValue : linkDirField.Name;
+            variantImageLink.MediaFieldName = string.IsNullOrWhiteSpace(mediaDirValue) ? mediaRefValue : imageMediaItemField.Name;
+
+            variantFieldArgs.TranslatedField = variantImageLink;
         }
     }
 }

@@ -135,12 +135,14 @@ Contains two methods:
 
 * `GetCurrent` - returns full URL of a current context item (ie. current page URL)
 * `GetItemLink` - return full URL of a provided item. Boolean parameter difines whether to generate full or relative URL
+* `RenderLink` - uses FieldRenderer in order to render items of Link type (having Link field) passing an optional specific CSS class
 
 Call usages:
 
 ```
 $linkTool.GetCurrent()
 $linkTool.GetItemLink($item,true)
+$linkTool.RenderLink($item,"some-custom-CSS-class")
 ```
 
 ## Related blog posts
