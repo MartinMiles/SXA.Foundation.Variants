@@ -2,6 +2,8 @@
 
 A collection of custom SXA rendering variants and some other useful things ie. custom NVelocity tools that may be helpful in your solution.
 
+![SXA.Foundation.Variants](https://raw.githubusercontent.com/wiki/MartinMiles/SXA.Foundation.Variants/images/main.png "SXA.Foundation.Variants") 
+
 ## Making it work
 
 You don't need to have entire library as it comes from repository, please feel free to pick up only those parts that you need with relevant dependencies. For your convenience variants' code is grouped into folders.
@@ -83,7 +85,7 @@ This field renders a value of a URL query string parameter passed with a GET-ali
 ```
 
 
-#### 5. Script
+#### 5. Inline script
 
 This variant field allows placing a JavaScript code to interact with existing page structure and execute this script upon page load. It may also interact with any JS framework that your site is using. 
 Please refer to the corresponding blog bost (links are located below), as it describes few useful cases when and how it may be helpful.
@@ -97,7 +99,16 @@ The field outputs just a `<script>` tag with the code provided:
 ```
 
 
-#### 6. Item reference
+#### 6. Script reference tag
+
+This one allows you referenceing a JavaScript files stored at your media library. The output looks as below:
+
+```
+<script type="text/javascript" defer="" href="/-/media/Library/Path/To/your-file.js"></script>
+```
+
+
+#### 7. Item reference
 
 Works similar to built-in **Reference** variant field, but instead of switching a context to an item referenced from a field of context item, it allows statically selecting any item from a Sitecore tree and switch context to that one. 
 Obviously, that would apply to every single instance of rendering variant, but it may be helpful when you are referencing some statical labels that at the same time are content editable and thus should be kept in data area of a site, not in definition items which rendering variants belong to.
