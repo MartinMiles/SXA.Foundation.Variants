@@ -104,7 +104,7 @@ The field outputs just a `<script>` tag with the code provided:
 This one allows you referenceing a JavaScript files stored at your media library. The output looks as below:
 
 ```
-<script type="text/javascript" defer="" href="/-/media/Library/Path/To/your-file.js"></script>
+<script type="text/javascript" defer="" src="/-/media/Library/Path/To/your-file.js"></script>
 ```
 
 
