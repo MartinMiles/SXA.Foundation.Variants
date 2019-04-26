@@ -44,28 +44,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Sitecore.Kernel">
-      <HintPath>..\libs\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Kernel.NoReferences.9.0.180604\lib\NET462\Sitecore.Kernel.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.NVelocity">
-      <HintPath>..\libs\Sitecore.NVelocity.dll</HintPath>
+    <Reference Include="Sitecore.NVelocity, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.NVelocity.NoReferences.9.0.180604\lib\NET462\Sitecore.NVelocity.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.Abstractions, Version=3.8.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\libs\Sitecore.XA.Foundation.Abstractions.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.Abstractions, Version=3.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.XA.Foundation.Abstractions.3.8.1\lib\NET462\Sitecore.XA.Foundation.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.Mvc, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\Sitecore.XA.Foundation.Mvc.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.Mvc, Version=3.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.XA.Foundation.Mvc.3.8.1\lib\NET462\Sitecore.XA.Foundation.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.RenderingVariants">
-      <HintPath>..\libs\Sitecore.XA.Foundation.RenderingVariants.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.RenderingVariants, Version=3.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.XA.Foundation.RenderingVariants.3.8.1\lib\NET462\Sitecore.XA.Foundation.RenderingVariants.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.SitecoreExtensions, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\Sitecore.XA.Foundation.SitecoreExtensions.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.SitecoreExtensions, Version=3.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.XA.Foundation.SitecoreExtensions.3.8.1\lib\NET462\Sitecore.XA.Foundation.SitecoreExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.Variants.Abstractions">
-      <HintPath>..\libs\Sitecore.XA.Foundation.Variants.Abstractions.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.Variants.Abstractions, Version=3.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.XA.Foundation.Variants.Abstractions.3.8.1\lib\NET462\Sitecore.XA.Foundation.Variants.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.WebRequest" />
@@ -110,10 +108,14 @@
     <Compile Include="Pipelines\VariantFields\QueryString\ParseQueryStringField.cs" />
     <Compile Include="Pipelines\VariantFields\QueryString\VariantQueryString.cs" />
     <Compile Include="Pipelines\VariantFields\QueryString\RenderQueryStringField.cs" />
-    <Compile Include="Pipelines\VariantFields\Script\Constants.cs" />
-    <Compile Include="Pipelines\VariantFields\Script\ParseScript.cs" />
-    <Compile Include="Pipelines\VariantFields\Script\RenderScript.cs" />
-    <Compile Include="Pipelines\VariantFields\Script\VariantScript.cs" />
+    <Compile Include="Pipelines\VariantFields\ScriptReferenceTag\Constants.cs" />
+    <Compile Include="Pipelines\VariantFields\ScriptReferenceTag\ParseScriptReferenceTag.cs" />
+    <Compile Include="Pipelines\VariantFields\ScriptReferenceTag\RenderScriptReferenceTag.cs" />
+    <Compile Include="Pipelines\VariantFields\ScriptReferenceTag\VariantScriptReferenceTag.cs" />
+    <Compile Include="Pipelines\VariantFields\InlineScript\Constants.cs" />
+    <Compile Include="Pipelines\VariantFields\InlineScript\ParseScript.cs" />
+    <Compile Include="Pipelines\VariantFields\InlineScript\RenderScript.cs" />
+    <Compile Include="Pipelines\VariantFields\InlineScript\VariantScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
