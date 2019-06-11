@@ -12,6 +12,12 @@ namespace SXA.Foundation.Variants.NVelocityExtensions
 
             return field?.TargetItem;
         }
+        
+        public static Item GetFixedReferenceItem(string guidOrPath)
+        {
+            return Sitecore.Context.Database.GetItem(guidOrPath);
+        }        
+        
         public static string GetField(Item item, string fieldName)
         {
             ReferenceField field = item.Fields[fieldName];

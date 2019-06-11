@@ -128,6 +128,7 @@ Currently there are two more tools coming with this module:
 Contains two methods:
 
 * `GetItemReferenceItem` - works similar to Item Reference rendering variant field, but withing NVelocity template. It returns another (referenced) item, referenced at some field of context item.
+* `GetFixedReferenceItem` - an alternative to the one above, where instead of getting a reference from a context page you can statically specify it by providing guid or path to switch context to.
 * `GetField` - simply returns the field value of context item.
 
 Call usages:
