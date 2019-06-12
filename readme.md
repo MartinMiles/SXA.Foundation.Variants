@@ -142,9 +142,10 @@ More real life example, as being used within Template field in conjunction with 
 
 ```
 #set($colorItem= $itemFieldTool.GetFixedReferenceItem("{1EFC04E2-CDA1-4254-ADD6-2F72176B60BF}"))
-
 <div class="publications-section__box-link">
-    <a href='$linkTool.GetUrlFromGeneralLinkField($colorItem, "Link")'>$linkTool.GetTitleFromGeneralLinkField($item, "Link")</a>
+    <a href='$linkTool.GetUrlFromGeneralLinkField($colorItem, "Link")'>
+        $linkTool.GetTitleFromGeneralLinkField($item, "Link")
+    </a>
 </div>
 ```
 
