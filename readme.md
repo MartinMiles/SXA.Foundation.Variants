@@ -138,6 +138,16 @@ $itemFieldTool.GetItemReferenceItem($item, "Field with reference ie. droplink")
 $itemFieldTool.GetField($item, "Field name to read from")
 ```
 
+More real life example, as being used within Template field in conjunction with linkTool:
+
+```
+#set($colorItem= $itemFieldTool.GetFixedReferenceItem("{1EFC04E2-CDA1-4254-ADD6-2F72176B60BF}"))
+
+<div class="publications-section__box-link">
+    <a href='$linkTool.GetUrlFromGeneralLinkField($colorItem, "Link")'>$linkTool.GetTitleFromGeneralLinkField($item, "Link")</a>
+</div>
+```
+
 
 
 
@@ -148,6 +158,8 @@ Contains two methods:
 * `GetCurrent` - returns full URL of a current context item (ie. current page URL)
 * `GetItemLink` - return full URL of a provided item. Boolean parameter difines whether to generate full or relative URL
 * `RenderLink` - uses FieldRenderer in order to render items of Link type (having Link field) passing an optional specific CSS class
+* `GetTitleFromGeneralLinkField` and `GetUrlFromGeneralLinkField` are helping to extract title and URL from a general link pasing in some field of given item
+
 
 Call usages:
 

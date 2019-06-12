@@ -34,5 +34,35 @@ namespace SXA.Foundation.Variants.NVelocityExtensions
 
             return fieldRenderer.Render();
         }
+                
+	public static string GetTitleFromGeneralLinkField(Item item, string fieldName)
+        {
+            var linkField = (LinkField)item.Fields[fieldName];
+            return linkField.Title ?? "";
+        }
+        
+        public static string GetUrlFromGeneralLinkField(Item item, string fieldName)
+        {
+            return LinkUrl(item.Fields[fieldName]);
+        }
+
+        private static String LinkUrl(LinkField lf)
+        {
+            if (lf == null)
+            {
+            	return string.Empty;
+            }
+                
+            switch (lf.LinkType.ToLower())
+            {
+                case "internal": return lf.TargetItem != null ? LinkManager.GetItemUrl(lf.TargetItem) : string.Empty;
+                case "media": return lf.TargetItem != null ? Sitecore.Resources.Media.MediaManager.GetMediaUrl(lf.TargetItem) : string.Empty;
+                case "external": return lf.Url;
+                case "anchor": return !string.IsNullOrEmpty(lf.Anchor) ? "#" + lf.Anchor : string.Empty;
+                case "mailto": return lf.Url;
+                case "javascript": return lf.Url;
+                default: return lf.Url;
+            }
+        }
     }
 }
